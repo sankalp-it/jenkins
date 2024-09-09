@@ -13,8 +13,10 @@ pipeline {
           sh '''
               git version
               java -version
-              mvn -version
           '''
+          withMaven {
+            sh "mvn --version"
+          } // 
         }
       }
 
