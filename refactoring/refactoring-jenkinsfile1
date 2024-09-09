@@ -9,11 +9,10 @@ pipeline {
     stages {
       stage('Audit tools') {
         steps {
-          git version
+          
           sh '''
               git version
               java -version
-              mvn -version
           '''
         }
       }
