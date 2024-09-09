@@ -10,10 +10,11 @@ pipeline {
       stage('Audit tools') {
         steps {
           git version
-          java -version
-          withMaven {
-            sh "mvn --version"
-          }
+          sh '''
+              git version
+              java -version
+              mvn -version
+          '''
         }
       }
 
