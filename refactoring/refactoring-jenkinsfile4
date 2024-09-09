@@ -4,7 +4,9 @@ pipeline {
     parameters {
         booleanParam(name: 'RELEASE', defaultValue: false, description: 'Is this a Release Candidate?')
     }
-
+    tools { 
+      maven 'Maven-3.9.9' 
+    } 
     environment {
         RELEASE_VERSION = '1.1.0'
         INT_VERSION = 'R2'
