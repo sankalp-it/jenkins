@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+    tools { 
+      maven 'Maven-3.9.9' 
+    } 
     parameters {
         booleanParam(name: 'RELEASE', defaultValue: false, description: 'Is this a Release Candidate?')
     }
