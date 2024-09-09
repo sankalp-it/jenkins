@@ -1,6 +1,9 @@
 pipeline {
     agent any
-    
+   tools { 
+      maven 'MAVEN_HOME' 
+      jdk 'JAVA_HOME' 
+    } 
     environment {
       VERSION = '0.1.0'
       RELEASE_VERSION = 'R.2'
